@@ -1,4 +1,6 @@
 const shiftCharacter = (c, shiftValue) => {
+  if (c.charCodeAt(0) < 97 || c.charCodeAt(0) > 122) return c;
+
   return String.fromCharCode(((c.charCodeAt(0) - 97 + shiftValue) % 26) + 97);
 };
 
