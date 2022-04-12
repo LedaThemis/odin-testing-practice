@@ -69,3 +69,27 @@ test('Divide: two floats', () => {
   expect(calculator.divide(0.3, 0.1)).toBeCloseTo(3);
   expect(calculator.divide(0.1, 0.2)).toBeCloseTo(0.5);
 });
+
+test('Multiply: a number and zero', () => {
+  expect(calculator.multiply(0, 2)).toBe(0);
+  expect(calculator.multiply(2, 0)).toBe(0);
+});
+test('Multiply: two positive numbers', () => {
+  expect(calculator.multiply(2, 4)).toBe(8);
+  expect(calculator.multiply(4, 2)).toBe(8);
+});
+
+test('Multiply: two negative numbers', () => {
+  expect(calculator.multiply(-2, -4)).toBe(8);
+  expect(calculator.multiply(-4, -2)).toBe(8);
+});
+
+test('Multiply: two postive and negative numbers', () => {
+  expect(calculator.multiply(2, -4)).toBe(-8);
+  expect(calculator.multiply(-4, 2)).toBe(-8);
+});
+
+test('Multiply: two floats', () => {
+  expect(calculator.multiply(0.3, 0.1)).toBeCloseTo(0.03);
+  expect(calculator.multiply(0.1, 0.2)).toBeCloseTo(0.02);
+});
