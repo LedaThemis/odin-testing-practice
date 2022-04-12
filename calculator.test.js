@@ -40,6 +40,11 @@ test('Subtract: positive and negative numbers', () => {
   expect(calculator.subtract(-3, 6)).toBe(-9);
 });
 
+test('Subtract: two floats', () => {
+  expect(calculator.subtract(0.6, -0.3)).toBeCloseTo(0.9);
+  expect(calculator.subtract(-0.3, 0.6)).toBeCloseTo(-0.9);
+});
+
 test('Divide: a number and zero', () => {
   expect(calculator.divide(0, 1)).toBe(0);
   expect(calculator.divide(1, 0)).toBe(Infinity);
