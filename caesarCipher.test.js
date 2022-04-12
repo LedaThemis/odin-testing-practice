@@ -33,6 +33,11 @@ test('Zero shift value', () => {
   expect(caesarCipher('a', 0)).toBe('a');
 });
 
+test('Negative shift value', () => {
+  expect(caesarCipher('ba', -1)).toBe('az');
+  expect(caesarCipher('abc', -2)).toBe('yza');
+});
+
 test('Space character', () => {
   expect(caesarCipher('z z', 2)).toBe('b b');
 });
