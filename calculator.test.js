@@ -15,6 +15,11 @@ test('Add: positive and negative numbers', () => {
   expect(calculator.add(-3, 2)).toBe(-1);
 });
 
+test('Add: two floats', () => {
+  expect(calculator.add(0.1, 0.2)).toBeCloseTo(0.3);
+  expect(calculator.add(0.1, -0.2)).toBeCloseTo(-0.1);
+});
+
 test('Subtract: a number and zero', () => {
   expect(calculator.subtract(0, 2)).toBe(-2);
   expect(calculator.subtract(2, 0)).toBe(2);
