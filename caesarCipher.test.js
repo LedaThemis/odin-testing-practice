@@ -29,6 +29,10 @@ test('Shift value of more than 26 (30)', () => {
   expect(caesarCipher('z', 30)).toBe(caesarCipher('z', 4));
 });
 
+test('Zero shift value', () => {
+  expect(caesarCipher('a', 0)).toBe('a');
+});
+
 test('Space character', () => {
   expect(caesarCipher('z z', 2)).toBe('b b');
 });
