@@ -34,3 +34,28 @@ test('Subtract: positive and negative numbers', () => {
   expect(calculator.subtract(6, -3)).toBe(9);
   expect(calculator.subtract(-3, 6)).toBe(-9);
 });
+
+test('Divide: a number and zero', () => {
+  expect(calculator.divide(0, 1)).toBe(0);
+  expect(calculator.divide(1, 0)).toBe(Infinity);
+});
+
+test('Divide: two positive numbers', () => {
+  expect(calculator.divide(2, 4)).toBeCloseTo(0.5);
+  expect(calculator.divide(4, 2)).toBe(2);
+});
+
+test('Divide: two negative numbers', () => {
+  expect(calculator.divide(-2, -4)).toBeCloseTo(0.5);
+  expect(calculator.divide(-4, -2)).toBe(2);
+});
+
+test('Divide: two postive and negative numbers', () => {
+  expect(calculator.divide(2, -4)).toBeCloseTo(-0.5);
+  expect(calculator.divide(-4, 2)).toBe(-2);
+});
+
+test('Divide: two floats', () => {
+  expect(calculator.divide(0.3, 0.1)).toBeCloseTo(3);
+  expect(calculator.divide(0.1, 0.2)).toBeCloseTo(0.5);
+});
